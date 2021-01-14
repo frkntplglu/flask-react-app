@@ -1,0 +1,45 @@
+.footer{
+    background: #181718 url(../../images/footer.png) repeat-x scroll center bottom;
+    color: $textlight;
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    &:before{
+        background: rgba(25, 25, 25, 0.8) none repeat scroll 0 0;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    .container{
+        position: relative;
+        z-index: 99;
+        display: flex;
+        padding-top: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-text{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    &-bottom{
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 30px;
+        color: $textlight;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        position: relative;
+        z-index: 99;
+        a{
+            color: $secondcolor;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+@import "config/variables.scss";
+@import "config/mixins.scss";
+@import "config/global.scss";
+//
+@import "shared/header";
+//
+@import "pages/index.scss";
+@import "pages/login.scss";
+@import "pages/profile.scss";
+//
+@import "shared/footer";
+ 

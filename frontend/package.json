@@ -1,0 +1,57 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "proxy": "http://127.0.0.1:5000/",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.13",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.1.2",
+    "@testing-library/user-event": "^12.2.2",
+    "framer-motion": "^3.1.1",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-loading-skeleton": "^2.1.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.0",
+    "sweetalert2": "^10.12.5",
+    "sweetalert2-react-content": "^3.2.2",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "api": "cd .. && cd server && flask run",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.1.8",
+    "@storybook/addon-essentials": "^6.1.8",
+    "@storybook/addon-links": "^6.1.8",
+    "@storybook/node-logger": "^6.1.8",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.8"
+  }
+}
