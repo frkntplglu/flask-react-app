@@ -8,7 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
+html {
   line-height: 1; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -174,7 +174,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -184,7 +185,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -377,19 +379,42 @@ img {
   vertical-align: middle;
 }
 
-blockquote, dl, dd, h1, h2, h3, h4, h5, h6, figure, p, pre, fieldset, ul, ol, menu, form {
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+p,
+pre,
+fieldset,
+ul,
+ol,
+menu,
+form {
   margin: 0;
 }
 
-button, fieldset, iframe {
+button,
+fieldset,
+iframe {
   border: 0;
 }
 
-fieldset, ul, ol, button, menu {
+fieldset,
+ul,
+ol,
+button,
+menu {
   padding: 0;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -407,61 +432,60 @@ td {
   padding: 0;
 }
 
-
-
 /* GLOBAL */
-body{
+body {
   font-family: $mainfont;
 }
- 
-input,textarea,button,select{
+
+input,
+textarea,
+button,
+select {
   outline: 0;
 }
 
-button{
+button {
   cursor: pointer;
 }
-a{
+a {
   transition: 300ms;
-  &:hover{
+  &:hover {
     text-decoration: none;
   }
 }
 
-
-.container{
-  max-width:1170px;
-  padding-left:15px;
-  padding-right:15px;
+.container {
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.btn{
+.btn {
   background: $maincolor;
-  padding:17px 34px;
+  padding: 17px 34px;
   color: #fff !important;
   font-size: 14px;
   font-weight: 600;
   font-family: $secondfont;
-  &:hover{
+  &:hover {
     background: $secondcolor;
   }
-  svg{
+  svg {
     margin-right: 10px;
   }
 }
 
-
-.quick-ask{
+.quick-ask {
   background: url(../../images/headbg.jpg);
   background-size: cover;
   height: auto;
   position: relative;
   text-align: center;
   color: #fff;
-  &:before{
-    content: '';
+  &:before {
+    content: "";
     background: rgba(0, 0, 0, 0.7);
     width: 100%;
     height: 100%;
@@ -469,32 +493,32 @@ a{
     top: 0;
     left: 0;
   }
-  .container{
+  .container {
     position: relative;
-    z-index: 99; 
+    z-index: 99;
     height: 425px;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  h1{
+  h1 {
     font-family: $secondfont;
     font-size: 36px;
   }
-  p{
+  p {
     font-size: 18px;
     font-style: italic;
     margin-top: 15px;
     margin-bottom: 50px;
   }
-  input{
+  input {
     width: calc(100% - 100px);
     height: 45px;
     border: none;
     padding: 0 15px;
     font-size: 14px;
   }
-  button{
+  button {
     background: $secondcolor;
     height: 45px;
     width: 100px;
@@ -506,42 +530,42 @@ a{
   }
 }
 
-.load-more{
-  margin: 50px auto 50px auto; 
+.load-more {
+  margin: 50px auto 50px auto;
   display: block;
 }
 
-.breadcrumb{
-  background:url(../../images/darkgrain.png);
+.breadcrumb {
+  background: url(../../images/darkgrain.png);
   border-bottom: 1px solid #dedde1;
   border-top: 1px solid #dedde1;
   display: block;
   padding: 35px 0;
   position: relative;
-  .container{
+  .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  h3{
+  h3 {
     font-family: $secondfont;
     color: $maincolor;
   }
-  ul{
+  ul {
     display: flex;
-    li{
+    li {
       font-size: 12px;
-      &:not(:last-child){
-        &:after{
-          content:'/';
+      &:not(:last-child) {
+        &:after {
+          content: "/";
           color: #ccc;
-          margin-left:10px;
+          margin-left: 10px;
           margin-right: 10px;
         }
       }
-      a{
+      a {
         color: $textdark;
-        &:hover{
+        &:hover {
           color: $secondcolor;
           text-decoration: underline;
         }
@@ -550,34 +574,50 @@ a{
   }
 }
 
-.page-content{
+.page-content {
   padding-top: 50px;
   padding-bottom: 50px;
-  h1,h2,h3,h4,h5,h6{
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: $secondfont;
     margin-bottom: 15px;
     margin-top: 15px;
   }
-  h1{font-size:28px;}
-  h2{font-size:26px;}
-  h3{font-size:24px;}
-  h4{font-size:22px;}
-  h5{font-size:20px;}
-  h6{font-size:18px;}
-  p{
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+  h6 {
+    font-size: 18px;
+  }
+  p {
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 25px;
   }
-  
 }
 
-.sidebar{
+.sidebar {
   width: 360px;
   margin-left: 30px;
   margin-top: 50px;
   flex-shrink: 0;
-  &-title{
+  &-title {
     border-left: 2px solid $maincolor;
     border-bottom: 1px solid #f5f5f5;
     height: 50px;
@@ -587,16 +627,15 @@ a{
     font-weight: 600;
     font-family: $secondfont;
   }
-  &-box{
+  &-box {
     margin-bottom: 50px;
   }
 }
 
-.hot-questions{
-  ul{
-    li{
-      
-      a{
+.hot-questions {
+  ul {
+    li {
+      a {
         color: $textdark;
         border-bottom: 1px solid #d2d2d2;
         padding: 17px 30px;
@@ -604,7 +643,7 @@ a{
         line-height: 18px;
         transition: 300ms;
         display: block;
-        &:hover{
+        &:hover {
           background: #f5f5f5;
         }
       }
@@ -612,73 +651,79 @@ a{
   }
 }
 
-
-
-.question-page{
+.question-page {
   display: flex;
 }
 
-.post-question{
+.post-question {
   width: calc(100% - 390px);
   margin-top: 50px;
   margin-bottom: 50px;
-  h1{
+  h1 {
     font-family: $secondfont;
     font-size: 24px;
   }
-  &-description{
+  &-description {
     font-size: 14px;
     color: $textlight;
     line-height: 24px;
     margin-top: 10px;
     margin-bottom: 30px;
   }
-  .form{
-    &-group{
+  .form {
+    &-group {
       margin-bottom: 40px;
-      p{
+      p {
         font-size: 14px;
         font-weight: 700;
         margin-bottom: 15px;
       }
     }
-    &-control{
+    &-control {
       width: 100%;
       height: 55px;
       border: 1px solid #ddd;
       font-size: 14px;
-      padding:0 15px;
+      padding: 0 15px;
       color: $textlight;
     }
-    
   }
-  textarea.form-control{
+  textarea.form-control {
     min-height: 200px;
     padding: 15px;
   }
 }
 
-.loader{
-  img{
-    width:40px;
+.loader {
+  img {
+    width: 40px;
     height: 40px;
   }
 }
 
-ul.admin-list{
+ul.admin-list {
   width: 100%;
-  li{
+  li {
     display: flex;
     align-items: center;
-    padding:5px 15px;
+    padding: 5px 15px;
     font-size: 13px;
-    &:nth-child(even){
+    &:nth-child(even) {
       background: #f5f5f5;
+    }
+    .buttons {
+      margin-left: auto;
+      button {
+        margin-left: 10px;
+      }
+    }
+    span {
+      margin-right: 10px;
     }
   }
 }
 
-.btn-admin{
+.btn-admin {
   padding: 5px 15px;
   border-radius: 5px;
   background: #ddd;
@@ -686,43 +731,56 @@ ul.admin-list{
   font-weight: 700;
 }
 
-.btn-delete{
+.btn-delete {
   background: #c13733;
   color: #fff;
   margin-left: auto;
 }
 
-.alert{
-  padding:20px;
+.alert {
+  padding: 20px;
   border-radius: 5px;
   font-size: 14px;
   margin-top: 10px;
   margin-bottom: 10px;
-  width:100%;
+  width: 100%;
   text-align: center;
-  &.danger{
+  &.danger {
     color: #721c24;
     background-color: #f8d7da;
     border-color: #f5c6cb;
   }
-  &.success{
+  &.success {
     color: #155724;
     background-color: #d4edda;
     border-color: #c3e6cb;
   }
-  &.notr{
+  &.notr {
     color: #383d41;
     background-color: #e2e3e5;
     border-color: #d6d8db;
   }
-  &.warning{
+  &.warning {
     color: #856404;
     background-color: #fff3cd;
     border-color: #ffeeba;
   }
-  &.info{
+  &.info {
     color: #004085;
     background-color: #cce5ff;
     border-color: #b8daff;
   }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.video {
+  margin: 0 auto;
+  display: block;
+}
+
+.editor {
+  width: 100%;
 }

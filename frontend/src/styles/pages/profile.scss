@@ -1,58 +1,64 @@
-.profile{
-    &-sidebar{
+.profile {
+  &-sidebar {
+    background: #f5f5f5;
+    padding: 20px;
+    width: 300px;
+    a {
+      display: block;
+      line-height: 50px;
+      padding-left: 15px;
+      padding-right: 15px;
+      color: $textdark;
+      font-size: 14px;
+      font-weight: 600;
+      &:not(:last-child) {
+        border-bottom: 1px solid #ddd;
+      }
+      &:hover {
+        background: #fff;
+      }
+    }
+  }
+  &-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    &-content {
+      width: calc(100% - 330px);
+      input,
+      select,
+      textarea {
         background: #f5f5f5;
-        padding: 20px;
-        width: 300px;
-        a{
-            display: block;
-            line-height: 50px;
-            padding-left:15px;
-            padding-right: 15px;
-            color: $textdark;
-            font-size: 14px;
-            font-weight: 600;
-            &:not(:last-child){
-                border-bottom: 1px solid #ddd;
-            }
-            &:hover{
-                background: #fff;
-            }
-        }
+        border: 1px solid #ddd;
+        width: 100%;
+        padding: 15px 20px;
+        border-radius: 3px;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+      textarea {
+        resize: none;
+        min-height: 250px;
+      }
+      button {
+        margin-left: auto;
+      }
+      h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
     }
-    &-page{
-        padding-top: 50px;
-        padding-bottom: 50px;
-        display: flex;
-        justify-content: space-between;
-        &-content{
-            width: calc(100% - 330px);
-            input,select,textarea{
-                background: #f5f5f5;
-                border: 1px solid #ddd;
-                width: 100%;
-                padding: 15px 20px;
-                border-radius: 3px;
-                font-size: 14px;
-                margin-bottom: 20px;
-            }
-            textarea{
-                resize: none;
-                min-height: 250px;
-            }
-            button{
-                margin-left: auto;
-            }
-            h1{
-                font-size: 20px;
-                margin-bottom: 20px;
-            }
-        }
-    }
+  }
 }
 
-.admin-section{
-    margin-bottom: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.admin-section {
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  .btn {
+    margin-top: 20px;
+  }
 }

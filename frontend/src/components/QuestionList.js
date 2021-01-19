@@ -1,30 +1,42 @@
-import React,{useState, useEffect} from 'react'
-import Question from '../components/Question'
-import Loader from '../components/Loader'
-//import Skeleton from 'react-loading-skeleton';
+import React, { useState, useEffect } from "react";
+import Question from "../components/Question";
+import Loader from "../components/Loader";
+import axios from "axios";
+import AlertMessage from "./AlertMessage";
 
 function QuestionList() {
-    const [questions, setQuestions] = useState([]);
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch("/api/questions"); 
-            const data = await response.json();
-            setQuestions(data);
+  const [questions, setQuestions] = useState([]);
+  const [loader, setLoader] = useState(true);
+  const [message, setMessage] = useState("");
+  useEffect(() => {
+    axios
+      .get("/api/questions")
+      .then((response) => {
+        setQuestions(response.data);
+        setLoader(false);
+        if (response.data.length === 0) {
+          setMessage("Şimdilik hiç sorumuz yok...");
         }
-
-        fetchData();
-    },[])
-    return (
-        <div className="question-list">
-            <div className="container">
-            
-            {
-                questions.length === 0 ? <Loader /> : questions.map(question => <Question key={question.id} question={question}></Question>)
-            } 
-            <button className="btn btn-primary load-more">Daha Fazla Yükle</button>
-            </div>
-        </div>
-    )
+      })
+      .catch((err) => {
+        setLoader(false);
+        setMessage("Bir şeyler ters gitti..");
+      });
+  }, []);
+  return (
+    <div className="question-list">
+      <div className="container">
+        {loader ? (
+          <Loader />
+        ) : (
+          questions.map((question) => (
+            <Question key={question.id} question={question}></Question>
+          ))
+        )}
+        {message ? <AlertMessage type="warning" message={message} /> : null}
+      </div>
+    </div>
+  );
 }
 
-export default QuestionList
+export default QuestionList;
