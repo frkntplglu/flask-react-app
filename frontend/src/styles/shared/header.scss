@@ -1,49 +1,50 @@
-.header{
-    height: 165px;
-    &-top{
-        background: $maincolor;
-        height: 45px;
-        .container{
-            height: 45px !important;
+.header {
+  height: 165px;
+  &-top {
+    background: $maincolor;
+    height: 45px;
+    .container {
+      height: 45px !important;
+    }
+    ul {
+      display: flex;
+      li {
+        font-size: 12px;
+        font-weight: 500;
+        margin-right: 30px;
+        a {
+          color: #fff;
+          &:hover {
+            text-decoration: underline;
+          }
         }
-        ul{
-            display: flex;
-            li{
-                font-size: 12px;
-                font-weight: 500;
-                margin-right: 30px;
-                a{
-                    color: #fff ;
-                    &:hover{
-                        text-decoration: underline;
-                    }
-                }
-            }
+      }
+    }
+  }
+  &-middle {
+    padding-top: 15px;
+  }
+  .container {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .main-menu {
+    ul {
+      display: flex;
+      text-transform: uppercase;
+      li {
+        margin-left: 45px;
+        font-size: 14px;
+        font-weight: 700;
+        a {
+          color: $maincolor;
+          &:hover {
+            color: $secondcolor;
+          }
         }
+      }
     }
-    &-middle{
-        padding-top: 15px;
-    }
-    .container{
-        height: 85px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .main-menu{
-        ul{
-            display: flex;
-            li{
-                margin-left:45px;
-                font-size: 14px;
-                font-weight: 700;
-                a{
-                    color: $maincolor;
-                    &:hover{
-                        color: $secondcolor;
-                    }
-                }
-            }
-        }
-    }
+  }
 }

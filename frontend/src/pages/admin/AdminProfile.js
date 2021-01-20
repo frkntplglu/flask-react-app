@@ -13,12 +13,6 @@ import AuthService from "../../services/auth-service";
 import AlertMessage from "../../components/AlertMessage";
 
 function AdminProfile() {
-  const [category, setCategory] = useState(" ");
-  const [categoryList, setCategoryList] = useState([]);
-
-  const [badge, setBadge] = useState(" ");
-  const [badgeList, setBadgeList] = useState([]);
-
   useEffect(() => {}, []);
 
   // const fetchData = async (url,stateWrapper) => {
@@ -32,7 +26,10 @@ function AdminProfile() {
       <Layout>
         <Breadcrumb pageTitle="Admin Panel" />
         <div className="container">
-          <AlertMessage type="danger" message="Hayır birader sen ne ayaksın?" />
+          <AlertMessage
+            type="danger"
+            message="Burası yönetim kurulu giriş yapılamaz"
+          />
         </div>
       </Layout>
     );

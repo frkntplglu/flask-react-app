@@ -35,6 +35,18 @@
   margin-bottom: 30px;
   padding-top: 0px;
   padding-bottom: 30px;
+  position: relative;
+  &-helpful {
+    font-size: 40px;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    cursor: pointer;
+    svg {
+      fill: #f39c11;
+      color: #f39c11;
+    }
+  }
   &:not(:last-child) {
     border-bottom: 1px solid #ddd;
   }
@@ -140,4 +152,32 @@
 
 .question-detail-card {
   margin-top: 30px;
+}
+
+.answer-form {
+  margin-bottom: 50px;
+  textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 20px;
+    resize: none;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+}
+
+.answer-list {
+  display: flex;
+  flex-direction: column;
+  .question-card {
+    width: 100%;
+  }
+}
+
+span.helpful {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  font-weight: 700;
+  color: green;
 }

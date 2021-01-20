@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import AuthService from "../services/auth-service";
@@ -54,10 +54,7 @@ function Header() {
           <div className="main-menu">
             <ul>
               <li>
-                <Link to="/sayfa/nasil-calisir">NASIL ÇALIŞIR? </Link>
-              </li>
-              <li>
-                <Link to="/tum-sorular">SORULARI KEŞFET</Link>
+                <Link to="/sayfa/6">HAKKIMIZDA</Link>
               </li>
               <li>
                 <Link to="/soru-sor" className="btn">

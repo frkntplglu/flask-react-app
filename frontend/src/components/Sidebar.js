@@ -1,12 +1,7 @@
-import React from 'react'
-import HotQuestions from './HotQuestions'
+import React from "react";
 
 function Sidebar() {
-    return (
-        <div className="sidebar">
-            <HotQuestions />
-        </div>
-    )
+  return <div className="sidebar"></div>;
 }
 
-export default Sidebar
+export default Sidebar;
